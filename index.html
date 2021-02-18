@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () {
+            let btn = document.querySelector('#btn');
+            let menu = document.querySelector('nav');
+
+            let news = document.querySelectorAll('a')[9];
+            let addText = document.querySelectorAll('.addText')[1];
+            let delText = document.querySelectorAll('.readMore')[0];
+
+            console.dir(addText);
+            console.log(addText);
+            console.dir(delText);
+            console.dir(news);
+            console.log(news);
+
+            btn.addEventListener('click', function() {
+                // menu.classList.add('active');
+                if (menu.classList.value == ""){
+                    menu.classList.add('active');
+                }
+                else if (menu.classList.value == "active") {
+                    menu.classList.remove('active');
+                }
+            });
+
+            news.addEventListener('click', function(e) {
+                e.preventDefault();
+                news.style.display = 'none'
+                if (addText.classList.value == "addText"){
+                    addText.classList.remove('addText');
+                    delText.classList.remove('readMore')
+                    delText.classList.add('addText')
+                    addText.classList.add('readMore');
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // for (let i = 8; i < 5; i++) {
+            //     news[i].addEventListener('click', function() {
+            //         for (let j = 0; j < 5; j++) {
+            //             if (addText[i].classList.value == "addText"){
+            //                 addText[i].classList.remove('addText');
+            //                 delText[i].classList.remove('readMore');
+            //                 delText[i].classList.add('addText');
+            //                 addText[i].classList.add('activeText');
+            //             }
+            //         }   
+            //     //     else if (menu.classList.value == "active") {
+            //     //     menu.classList.remove('active');
+            //     // }
+            // });
+            // }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div><h1>bio</h1></div>
+            <div>life</div>
+            <div class="button"><button id="btn">Menu</button></div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">News</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Block</a>
+            <a href="#">Regions</a>
+            <a href="#">Typography</a>
+        </div>
+    </nav>
+  
+    <section class="general-section">
+        <article class="general-news">
+            <div class="general-img">
+                <img src="img01.jpg" alt=""> 
+            </div>
+            <div class="general-description">
+                <h2>
+                    <a href="#">Mauris sodales placerat massa</a>
+                </h2>
+                <p>
+                    Suspendisse in dui velit, vel fermentum eros. <br>
+                    Nul lam bland it ipsum sed sem ullamcorper ac fermentum urna ullamcorper. Nunc pellentesque tristique sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et uitrices posuere cubilia Curae; Aenean eu véhicula risus. <span class="addText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, minus rerum itaque natus consequatur saepe nobis, neque unde veniam maxime alias est? Quidem nobis numquam dolorem iusto id adipisci asperiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iusto ex ipsum quibusdam perspiciatis reprehenderit similique officia obcaecati architecto consequuntur quasi reiciendis perferendis harum, nemo quis a hic, repudiandae maiores.</span>
+                </p>
+            </div>
+        </article>
+    </section>
+
+        <h2 class="h2-news">News</h2>
+
+    <section class="news-section">
+        <article class="news">
+            <div>
+                <img src="img02.jpg" alt="">
+                <h3>Vestibulum sed ipsum primis in faucibus orci</h3>
+                <p>10.11.2011</p>
+                <p>
+                    Nunc pellentesque tristique sollicitiudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aeneaneu<span class="readMore">...</span><span class="addText"> lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti enim eaque consequuntur. Ex nostrum voluptas debitis placeat quae, magni deleniti sapiente laborum vel assumenda hic tempore repellat praesentium incidunt aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi itaque ex iusto dignissimos id perferendis dolorem soluta ut facilis. Perspiciatis possimus voluptates eligendi laborum. Itaque, earum alias. Cumque, ab.</span>
+                </p>
+                <a href="#">read more</a>
+            </div>
+            <div>
+                <img src="img03.jpg" alt="">
+                <h3>Phasellus purus orci, rhoncus eget tincidunt</h3>
+                <p>10.11.2011</p>
+                <p>
+                    In id ullamcorper iectus. Donee ac tempus nibh. In ac justo vel ipsum tempor venenatis non vitae erat. Fusee dignissim mauris eget nulla lobortis<span class="readMore">...</span><span class="addText"> lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti enim eaque consequuntur. Ex nostrum voluptas debitis placeat quae, magni deleniti sapiente laborum vel assumenda hic tempore repellat praesentium incidunt aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi itaque ex iusto dignissimos id perferendis dolorem soluta ut facilis. Perspiciatis possimus voluptates eligendi laborum. Itaque, earum alias. Cumque, ab.</span>
+                </p>
+                <a href="#">read more</a>
+            </div>
+            <div>
+                <img src="img04.jpg" alt="">
+                <h3>Praesent adipiscing lacus nec nulla</h3>
+                <p>10.11.2011</p>
+                <p>
+                    Lorem ipsum dolor sit am et, adipiscing elit. Nam sit amet turpi s et sa pi en consectetur venenatis. Suspendisse. Donee nec purus justo, non commodo<span class="readMore">...</span><span class="addText"> lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti enim eaque consequuntur. Ex nostrum voluptas debitis placeat quae, magni deleniti sapiente laborum vel assumenda hic tempore repellat praesentium incidunt aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi itaque ex iusto dignissimos id perferendis dolorem soluta ut facilis. Perspiciatis possimus voluptates eligendi laborum. Itaque, earum alias. Cumque, ab.</span>
+                </p>
+                <a href="#">read more</a>
+            </div>
+            <div>
+                <img src="img05.jpg" alt="">
+                <h3>Mauris vel dui ante dapibus vestibulum</h3>
+                <p>19.09.2011</p>
+                <p>
+                    Mauris vel dui ante, ac porta neque. Duis id condimentum elit. Donee dapibus vestibulum tortor, eu consectetur Iibero fermentum eget. Duis eget<span class="readMore">...</span><span class="addText"> lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti enim eaque consequuntur. Ex nostrum voluptas debitis placeat quae, magni deleniti sapiente laborum vel assumenda hic tempore repellat praesentium incidunt aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi itaque ex iusto dignissimos id perferendis dolorem soluta ut facilis. Perspiciatis possimus voluptates eligendi laborum. Itaque, earum alias. Cumque, ab.</span>
+                </p>
+                <a href="#">read more</a>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
